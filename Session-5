@@ -1,0 +1,33 @@
+3. Parameterize the API endpoint
+The endpoint is already parameterized using ${endpoint} from the CSV file.
+
+For example:
+CSV variable	   HTTP Request setting
+${endpoint}	     Server Name or IP
+${username}	     Email in the request body
+${password}    	Password in the request body
+
+4. Extract a session token and reuse it
+For a mock login API that returns JSON containing a token, add a Regular Expression Extractor under the login HTTP Request:
+
+Right-click login request → Add → Post Processors → Regular Expression Extractor.
+
+Configure:
+Setting	Value
+Name	Extract Session Token
+Apply to	Main sample only
+Field to check	Body
+Reference Name	sessionToken
+Regular Expression	"token"\s*:\s*"([^"]+)"
+Template	$1$
+Match No.	1
+Default Value	TOKEN_NOT_FOUND
+
+If the login response contains {"token":"abc123"}, JMeter stores abc123 in ${sessionToken}.
+
+Next, add another HTTP Request for the order-history API:
+Field	Example value
+Protocol	https
+Server Name or IP	Your authorized mock API host
+Path	/api/orders
+Method	GET
