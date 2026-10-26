@@ -1,0 +1,19 @@
+3. Add a Response Assertion for orderId
+1. Right-click Get Order History → Add → Assertions → Response Assertion.
+2. Configure the assertion:
+Field	Value
+Name	Validate Order History
+Apply to	Main sample only
+Field to Test	Text Response
+Pattern Matching Rule	Contains
+Patterns to Test	orderId
+
+For example, this response should pass:
+{
+  "orders": [
+    {
+      "orderId": "ORD101",
+      "status": "Delivered"
+    }
+  ]
+}
