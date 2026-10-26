@@ -1,0 +1,6 @@
+3. Analyze the Throughput Graph (3–4 lines)
+Use this example as your assignment explanation, adjusting it to match your actual graph.
+The throughput graph shows how many requests the server processes over time.
+A steady increase indicates that the server is handling more requests as the load grows. 
+A plateau may indicate that the server has reached its processing capacity, while sudden drops may indicate delays, errors, or resource bottlenecks.
+The graph should be compared with response times and error rates before concluding that the server is overloaded.
