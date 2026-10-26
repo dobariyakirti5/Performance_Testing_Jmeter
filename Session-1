@@ -1,0 +1,4 @@
+No.	Real-world scenario	Type of performance testing	Explanation
+1	Millions of users browse products during a Big Billion Days or End of Reason Sale event.	Load Testing	Test the application with the expected number of concurrent users to check whether product pages load quickly and the app performs properly.
+2	Flash sale starts at 12 PM, and thousands of users try to buy the same product at once.	Spike Testing	Suddenly increase the number of users to check whether the application can handle a rapid traffic spike without crashing.
+3	Users place orders and make payments continuously throughout a 24-hour sale.	Endurance Testing	Run the application under a sustained load for a long period to identify memory leaks, slow response times, or performance degradation.
