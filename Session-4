@@ -1,0 +1,31 @@
+2. Send a POST request for login
+Objective: Send email and password fields in JSON format and inspect the login response.
+
+Use ReqRes as a mock API. Its availability and authentication requirements may vary.
+Step 1: Configure HTTP Request
+Field	Value
+Name	Login API
+Protocol	https
+Server Name	reqres.in
+Method	POST
+Path	/api/login
+
+3. Search for products using User Defined Variables
+Objective: Test two different search terms using JMeter variables.
+Step 1: Add User Defined Variables
+Right-click Test Plan → Add → Config Element → User Defined Variables.
+
+Enter these variables:
+Name	Value
+searchTerm1	shoes
+searchTerm2	laptop
+
+Step 2: Configure HTTP Request
+Use a public API that supports search, such as a suitable test API. Flipkart's public website may block automated requests, so a generic request parameter may not trigger a real search.
+
+For a demonstration using a test endpoint that supports a search parameter, configure:
+Field	Value
+Method	GET
+Path	The endpoint's documented search path
+Parameter Name	search
+Parameter Value	${searchTerm1}
