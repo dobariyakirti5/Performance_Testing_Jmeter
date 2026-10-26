@@ -1,0 +1,13 @@
+3. Calculate response-time percentiles and peak throughput
+After the test, add these listeners:
+- Aggregate Report
+- Summary Report
+- View Results Tree for debugging only
+- A time-series throughput graph, such as jp@gc – Transactions per Second, if installed through Plugins Manager
+Run the test, then locate the row for POST /api/order in Aggregate Report.
+Metric	Where to find it	What it means
+Average response time	Aggregate Report → Average	Mean response time in milliseconds
+90th percentile	Aggregate Report → 90% Line	90% of requests completed within this time
+95th percentile	Aggregate Report → 95% Line	95% of requests completed within this time
+Error percentage	Aggregate Report → Error %	Percentage of failed requests
+Peak throughput	Throughput-over-time graph	Highest observed request rate during the test
