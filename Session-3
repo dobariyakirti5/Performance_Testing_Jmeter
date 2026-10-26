@@ -1,0 +1,20 @@
+3. Add View Results Tree and Run the Test
+
+Observe these details in View Results Tree:
+Information	Description
+Sample Time	Time when the request was recorded
+Response Time / Elapsed	Total time taken to complete the request
+Response Code	Expected HTTP 200
+Response Message	Usually OK for a successful request
+Success	Indicates whether the sample passed
+Response Data	JSON response containing posts
+
+
+4. Add a Constant Timer
+
+Run the test again and compare the results.
+Comparison	Without Timer	With Timer
+Total requests	10	10
+Delay	No additional timer delay	2 seconds per sampler execution
+Total execution time	Usually shorter	Usually longer
+Response time	Record actual value	Record actual value
