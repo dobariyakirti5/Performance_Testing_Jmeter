@@ -1,0 +1,11 @@
+5. Run the test and record two observations
+1. Save the test plan as Flipkart_FlashSale_Test.jmx.
+2. Click the green Start button.
+3. After the test finishes, open Summary Report.
+4. Record these metrics:
+Metric	What it tells you
+Samples	Total requests sent
+Average	Average response time
+Min / Max	Fastest and slowest response
+Error %	Percentage of failed requests
+Throughput	Requests processed per second or minute
