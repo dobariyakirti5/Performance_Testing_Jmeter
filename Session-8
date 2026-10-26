@@ -1,0 +1,18 @@
+1. Run a load test and export Aggregate Report as CSV
+Step 1: Create the test plan
+Open Apache JMeter and add:
+
+Test Plan → Add → Threads (Users) → Thread Group
+Setting	Value
+Number of Threads (users)	10
+Ramp-up Period (seconds)	5
+Loop Count	5
+
+Step 2: Add an HTTP Request
+Right-click Thread Group → Add → Sampler → HTTP Request.
+Field	Value
+Name	Product Search API
+Protocol	https
+Server Name	jsonplaceholder.typicode.com
+Method	GET
+Path	/posts
